@@ -26,3 +26,13 @@ const qualNome = prompt ("qual seu nome?")
 const qualIdade = prompt ("qual sua idade?") 
 
 console.log ("ola meu nome é", nome, "e tenho", idade, "anos.")  // apesar de prompt só gerar string meu javascript foi capaz de indentificar na idade um numero
+
+const corAzul = sim = true
+const corVermelho = não = true
+const corAmarela = não = true
+
+const corAzul = prompt ("você esta uzando roupa azul hoje?")
+const corVermelho = prompt ("você esta usando roupa vermelha hoje")
+const corAmarela = prompt ("você esta usando roupa amarela hoje?")
+ 
+console.log (corAzul, corVermelho, corAmarela)
