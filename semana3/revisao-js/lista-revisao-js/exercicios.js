@@ -20,15 +20,25 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-    array=[1, 2, 3, 4, 5, 6]%2===0
-    return array
+   let numerosPares =[]
+   for (let i = 0;i<array.length; i++){
+       if (array[i]% 2 ===0){
+           numerosPares.push(array[i])
+       }
+   }    
+    return numerosPares
 } 
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-    return array(array%2===0)*2
-}
-
+    let numerosParesElevados =[]
+    for (let i = 0;i<array.length; i++){
+        if (array[i]% 2 ===0){
+            numerosParesElevados.push(array[i]**2)
+        }
+    }    
+     return numerosParesElevados
+}     
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
   
@@ -37,7 +47,16 @@ function retornaMaiorNumero(array) {
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
 
+const [menorNumero, maiorNumero] = retornaArrayOrdenado([num1, num2])
+     
+return {
+      maiorNumero: maiorNumero,
+      maiorDivisivelPorMenor: maiorNumero % menorNumero === 0,
+      diferenca: maiorNumero - menorNumero
 }
+
+}
+
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
@@ -46,7 +65,19 @@ function retornaNPrimeirosPares(n) {
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-
+    if (ladoA===ladoB&&ladoB===ladoC){
+        return "Equilátero"
+    }else if (ladoA!==ladoB&&ladoA===ladoC){
+        return"Isósceles"
+    }else if (ladoA===ladoB&&ladoA!==ladoC){
+        return"Isósceles"
+    }else if (ladoA!==ladoB&&ladoB===ladoC){
+        return"Isósceles"
+    }else if (ladoA===ladoB&&ladoB!==ladoC){
+        return"Isósceles"
+    }else{ladoA!==ladoB&&ladoB!==ladoC&&ladoA!==ladoC
+        return"Escaleno"
+    }
 }
 
 
@@ -57,22 +88,40 @@ function retornaSegundoMaiorESegundoMenor(array) {
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
+    nome= 'O Diabo Veste Prada',
+    ano= 2006,
+    diretor= 'David Frankel',
+    atores= ['Meryl Streep', ' Anne Hathaway', ' Emily Blunt', ' Stanley Tucci']
    
+return `Venha assistir ao filme ${nome}, de ${ano}, dirigido por ${diretor} e estrelado por ${atores}.`
 }
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-   
-}
+    nome= "Astrodev",
+	idade= 25,
+	email= "astrodev@labenu.com.br",
+	endereco= "Rua do Futuro, 4"
+    return { ...pessoa, nome: "ANÔNIMO" }
+} 
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
+    const validarPessoa = pessoa => (
+        pessoa.altura > 1.5 &&
+        pessoa.idade > 14 &&
+        pessoa.idade < 60)
    
+    return pessoas.filter(validarPessoa)
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+    const validarPessoa = pessoa => (
+        pessoa.altura > 1.5 &&
+        pessoa.idade > 14 &&
+        pessoa.idade < 60)
+    return pessoas.filter(pessoa => !validarPessoa(pessoa))
 }
 
 // EXERCÍCIO 14
