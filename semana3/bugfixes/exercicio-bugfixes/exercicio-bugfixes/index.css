@@ -88,7 +88,7 @@ div img {
 }
 
 p{
-    width: 190px;
+    width: 200px;
     margin: auto;
 }
 
@@ -106,36 +106,72 @@ div:last-child {
 table {
     width: 60%;
     text-align: center;
+    margin: auto;
 }
 
 table img{
     width: 48px;
 }
 
-td button {
+td button{
     background-color: #fadf63;
     width: 150px;
     height: 30px;
     border-radius: 5px;
-    color: black;
+    color: rgb(0, 0, 0);
+}
+
+td button:active {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+td button:hover {
+    background-color: #e9c111;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
 }
 
 .container-do-search {
     margin-top: 20px;
     height: 100px;
+    
 }
 
+input{
+    border-bottom: solid black 1.5px;
+    border-top : none;
+    border-left: none;
+    border-right: none;
+}
 
-#back-button {
-    background-color: white;
+.botao-voltar:hover {
+    background-color: rgb(251, 76, 76);
     width: 100px;
     height: 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: 10px;
+    color: rgb(251, 247, 247);
+}
+
+.botao-voltar {
+    margin-top: 45px;
+    margin-left: 45%;
+    background-color: #ff6f6f;
+    width: 100px;
+    height: 20px;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
     font-size: 10px;
     color: black;
 }
 
-#back-button:hover {
-    background-color: #635a3d
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
