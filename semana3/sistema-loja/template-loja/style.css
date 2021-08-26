@@ -1,0 +1,15 @@
+.alinhar-texto{
+    text-align: center; 
+}
+.espaço-entre-paginas{
+    margin: 5px; 
+}
+#alinhando-funcionarios{
+    margin-left: 44vw;
+}
+.mudando-cor-fundo{
+    background-color: rgba(197, 96, 255, 0.712);
+}
+#cor-do-botao{
+    background-color: rgba(209, 92, 230, 0.849);
+}
