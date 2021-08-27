@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    width:auto;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+span p{
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width:auto
+}
+.formação{
+    margin-left: 250px;
+    width: 500px;
+    margin-bottom: 245px;
+}
+.formação-tituto{
+    text-align: center;
+}
+.projetos{
+    margin-left: 33%;
+    width: 300px;
+    margin-bottom: 210px;
+    background-image: linear-gradient(to top, rgb(173, 245, 255), rgb(246, 178, 246));
+    text-align: center;
+    border-radius: 12px;
+    font-size: 16px;
+    padding: 25px;
+}
+a#lojinha{
+    color: rgb(63, 12, 110);
+    margin-left: 25px;
+}
+a#blackjack{
+    color: rgb(64, 11, 114);
+}
+.competencias{
+    width: 500px;
+    margin-bottom: 200px;
+    margin-left: 120px; 
+}
+.contato{
+    width: 500px;
+    margin-left: 100px;
+    float: left;
+    margin-bottom: 25px;
+}
+html{
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+    background-image: linear-gradient(to bottom, rgb(173, 245, 255), rgb(246, 178, 246));
+}
+header a{
+    margin: 25px;
+}
+html::-webkit-scrollbar{
+    background-image:linear-gradient(to bottom, rgb(173, 245, 255), rgb(246, 178, 246));
+    width: 12px;
+}
+
