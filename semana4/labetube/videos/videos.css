@@ -1,0 +1,40 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+header{
+    display: flex;
+    background-color: rgba(148, 137, 137, 0.801);
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+header img{
+    height: 45px;
+    width: 45px;
+}
+h2{
+    display: inline;
+}
+h1{
+    margin-left: 32px;
+    margin: 20px;
+}
+main{
+    display: grid;
+    width: 98%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
+    margin-left: 25px;
+}
+video{
+    width: 895px;
+    height: 500px;
+    margin-bottom: 90px;
+    
+}
+footer{
+    background-color: coral;
+    height: 45px;
+    text-align: center;
+    padding-top: 21px;
+}
