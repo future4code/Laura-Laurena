@@ -2,6 +2,7 @@ import './App.css';
 import axios from'axios';
 import React from 'react'; 
 
+
 const headers = {
   headers: {
     Authorization: "Laura-Laurena-Maryam"
@@ -12,6 +13,7 @@ export default class App extends React.Component {
   state={
       UsuarioName: "",
       UsuarioEmail: ""
+  
   };
 
   componentDidMount() {
@@ -45,7 +47,7 @@ export default class App extends React.Component {
       });
   };
 
-  getAllPlaylists = () => {
+  getAllUsuarios = () => {
     const url =
       "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
     axios
@@ -59,12 +61,12 @@ export default class App extends React.Component {
   };
 
   render(){
-    const UsuarioComponents = this.state.UsuarioName.map((usuario) => {
-      return <li key={usuario.id}>{usuario.UsuarioName}</li>;
-    });
+    // const UsuarioComponents = this.state.UsuarioName.map((usuario) => {
+    //   return <li key={usuario.id}>{this.usuario.UsuarioName}</li>;
+    // });
   return (
     <div className="App">
-      <h1>Labeuser</h1>
+      <h1>Labeusers</h1>
         <input
           placeholder="Nome do usuario"
           value={this.state.UsuarioName}
@@ -76,7 +78,8 @@ export default class App extends React.Component {
           onChange={this.handleUsuarioEmail}
         />
         <button onClick={this.createUsuario}>Enviar</button>
-        {UsuarioComponents}
+        {/* {UsuarioComponents} */}
+        {console.log(this.state)}
     </div>
   );
   }
