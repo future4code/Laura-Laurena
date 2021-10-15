@@ -1,16 +1,23 @@
 import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
 import { Switch, Route, BrowserRouter, useHistory } from 'react-router-dom';
-import HomePage from'./components/HomePage/HomePage';
-import ListTripsPage from './components/ListTripsPage/ListTripsPage';
-import ApplicationFormPage from './components/ApplicationFormPage/ApplicationFormPage';
-import LoginPage from './components/LoginPage/LoginPage';
-import AdminHomePage from './components/AdminHomePage/AdminHomePage';
-import TripDetailsPage from './components/TripDetailsPage/TripDetailsPage';
-import CreateTripPage from './components/CreateTripPage/CreateTripPage';
+import HomePage from'./pages/HomePage/HomePage';
+import ListTripsPage from './pages/ListTripsPage/ListTripsPage';
+import ApplicationFormPage from './pages/ApplicationFormPage/ApplicationFormPage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import AdminHomePage from './pages/AdminHomePage/AdminHomePage';
+import TripDetailsPage from './pages/TripDetailsPage/TripDetailsPage';
+import CreateTripPage from './pages/CreateTripPage/CreateTripPage';
+
+const ContainerApp=styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
 
 export default function App() {
   return(
+  <ContainerApp> 
   <BrowserRouter>
     <Switch>
 
@@ -48,5 +55,6 @@ export default function App() {
 
     </Switch>
   </BrowserRouter>
+  </ContainerApp>
   )
 }

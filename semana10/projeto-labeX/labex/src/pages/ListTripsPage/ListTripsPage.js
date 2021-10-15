@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Switch, Route, BrowserRouter, useHistory } from 'react-router-dom';
 
 
-const CardViagem= styled.div`
+export const CardViagem= styled.button`
 display: flex;
 flex-direction: column;
 align-items: center;

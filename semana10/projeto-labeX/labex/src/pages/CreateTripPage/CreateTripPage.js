@@ -10,6 +10,26 @@ export default function CreateTripPage() {
     }
     return(
     <div>
+        
+    <input
+        label={'Nome'} 
+
+
+    />
+    <input
+        label={'Planeta'}
+        name={'planet'}
+    />
+    <input label="Data"
+        />
+    <input
+        label={'Descrição'}
+        name={'description'}
+    />
+    <input
+        label={'Duração em dias'} type={'number'}
+        name={'duration'}
+    />
         <input/>
         <input/>
         <input/>
