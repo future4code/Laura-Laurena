@@ -1,18 +1,24 @@
 import React from "react"
-import {goToSingUpPage, goToFeedPage} from "../../routes/coordinator"
+import {goToSignUpPage, goToFeedPage} from "../../routes/coordinator"
 import {Inputs} from "./Style"
 import { useHistory } from "react-router";
 import useForm from "../../hooks/useForm"
+import { login } from "../../services/acessoAoApp/login";
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 export default function LoginPage() {
     const [form, onChange, clear]=useForm({email:"", password:""})
 
+    useUnprotectedPage()
+
     const history= useHistory()
 
     const onSubmitForm=(event)=>{
-        console.log(form)
         event.preventDefault()
+        login(form, clear, history)
     } 
+
+    
 
     return (
     <div>
@@ -37,7 +43,7 @@ export default function LoginPage() {
         <button  
         type={"submit"}
         >Entrar</button>
-        <button onClick={()=>goToSingUpPage(history)}>Cadastre-se</button>
+        <button onClick={()=>goToSignUpPage(history)}>Cadastre-se</button>
         </form>
         
     </div>
