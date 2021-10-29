@@ -1,26 +1,20 @@
 import React from "react"
-import {BrowserRouter, Switch, Route} from "react-router-dom"
-import Header from "../components/Header/Header"
+import {Switch, Route} from "react-router-dom"
 import ErrorPage from "../pages/ErrorPage/ErrorPage"
 import FeedPage from "../pages/FeedPage/FeedPage"
 import LoginPage from "../pages/LoginPage/LoginPage"
 import PostPage from "../pages/PostPage/PostPage"
 import SignUpPage from "../pages/SignUpPage/SignUpPage"
 
-export default function Router(){
+export default function Router({setButton2Text}){
     return(
-        <BrowserRouter>
-
-            {/* <Header/> */}
-
             <Switch>
-
                 <Route exact path= "/login">
-                    <LoginPage/>
+                    <LoginPage setButton2Text={setButton2Text}/>
                 </Route>
 
                 <Route exact path="/cadastro">
-                    <SignUpPage/>
+                    <SignUpPage setButton2Text={setButton2Text}/>
                 </Route>
 
                 <Route exact path="/">
@@ -34,8 +28,6 @@ export default function Router(){
                 <Route>
                     <ErrorPage/>
                 </Route>
-
             </Switch>
-        </BrowserRouter>
     )
 }

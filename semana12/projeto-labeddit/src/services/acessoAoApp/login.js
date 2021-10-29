@@ -2,15 +2,16 @@ import axios from "axios"
 import { BASE_URL } from "../../constants/urls"
 import { goToFeedPage } from "../../routes/coordinator"
 
-export const login=(body,clear,history)=>{
+export const login=(body,clear,history,setButton2Text)=>{
     const headers= 'Content-Type: application/json'
     axios.post(`${BASE_URL}/users/login`, body, headers)
     .then((res)=>{
         localStorage.setItem("token", res.data.token)
         clear()
         goToFeedPage(history)
+        setButton2Text("Logout")
     })
     .catch((err)=>{
-        alert("Erro ao logar.")
+        alert(err.response.data.message)
     })
 }

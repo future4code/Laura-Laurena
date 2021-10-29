@@ -1,32 +1,31 @@
-// import * as React from 'react';
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
-// import Typography from '@mui/material/Typography';
-// import Button from '@mui/material/Button';
-// import IconButton from '@mui/material/IconButton';
-// import MenuIcon from '@mui/icons-material/Menu';
+import  React, { useState } from 'react';
+import { useHistory } from 'react-router';
+import { goToFeedPage, goToLoginPage } from '../../routes/coordinator';
+import { Button2, ButtonLab, DivHeader } from './style';
 
-// export default function Header() {
-//   return (
-//     <Box sx={{ flexGrow: 1 }}>
-//       <AppBar position="static">
-//         <Toolbar>
-//           <IconButton
-//             size="large"
-//             edge="start"
-//             color="inherit"
-//             aria-label="menu"
-//             sx={{ mr: 2 }}
-//           >
-//             <MenuIcon />
-//           </IconButton>
-//           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-//             News
-//           </Typography>
-//           <Button color="inherit">Login</Button>
-//         </Toolbar>
-//       </AppBar>
-//     </Box>
-//   );
-// }
+
+export default function Header({button2Text, setButton2Text}) {
+    const history=useHistory()
+    const token= localStorage.getItem("token")
+    
+    const logout=()=>{
+        localStorage.removeItem("token")
+    }
+
+    const Button2Action=()=>{
+        if(token){
+            logout()
+            setButton2Text("Login")
+            goToLoginPage(history)
+        }else{
+            goToLoginPage(history)
+        }
+    }
+    
+    return (
+    <DivHeader>
+        <ButtonLab onClick={()=>goToFeedPage(history)}><h1>Labeddit</h1></ButtonLab>
+        <Button2 onClick={Button2Action}>{button2Text}</Button2>
+    </DivHeader>
+    );
+}

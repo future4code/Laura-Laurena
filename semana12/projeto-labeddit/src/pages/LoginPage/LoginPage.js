@@ -6,7 +6,7 @@ import useForm from "../../hooks/useForm"
 import { login } from "../../services/acessoAoApp/login";
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
-export default function LoginPage() {
+export default function LoginPage({setButton2Text}) {
     const [form, onChange, clear]=useForm({email:"", password:""})
 
     useUnprotectedPage()
@@ -15,7 +15,7 @@ export default function LoginPage() {
 
     const onSubmitForm=(event)=>{
         event.preventDefault()
-        login(form, clear, history)
+        login(form, clear, history, setButton2Text)
     } 
 
     

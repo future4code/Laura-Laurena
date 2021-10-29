@@ -3,8 +3,9 @@ import { useHistory } from "react-router";
 import {Inputs} from "./Style"
 import useForm from "../../hooks/useForm"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
+import {signUp} from "../../services/acessoAoApp/signUp"
 
-export default function SignUpPage() {
+export default function SignUpPage({setButton2Text}) {
     const history=useHistory()
 
     useUnprotectedPage()
@@ -13,6 +14,7 @@ export default function SignUpPage() {
 
     const onSubmitForm=(event) => {
         event.preventDefault()
+        signUp(form, clear, history, setButton2Text)
     }
 
     return (
