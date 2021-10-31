@@ -1,6 +1,6 @@
 import React from "react"
 import { useHistory } from "react-router";
-import {Inputs} from "./Style"
+import {Inputs, Buttons, Container} from "./Style"
 import useForm from "../../hooks/useForm"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 import {signUp} from "../../services/acessoAoApp/signUp"
@@ -20,7 +20,7 @@ export default function SignUpPage({setButton2Text}) {
     return (
     
     <form onSubmit={onSubmitForm}>
-        <div>
+        <Container>
         <h1>Cadastre-se</h1>
         <Inputs 
             value={form.name} 
@@ -46,8 +46,8 @@ export default function SignUpPage({setButton2Text}) {
             type="password"
             required
         />
-        <button type={"submit"}>Cadastrar</button>
-        </div>
+        <Buttons type={"submit"}>Cadastrar</Buttons>
+        </Container>
     </form>
     );
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import {goToSignUpPage, goToFeedPage} from "../../routes/coordinator"
-import {Inputs} from "./Style"
+import {Inputs, Container, Button1, Button2} from "./Style"
 import { useHistory } from "react-router";
 import useForm from "../../hooks/useForm"
 import { login } from "../../services/acessoAoApp/login";
@@ -21,7 +21,7 @@ export default function LoginPage({setButton2Text}) {
     
 
     return (
-    <div>
+    <Container>
         <h1>Login</h1>
         <form onSubmit={onSubmitForm}>
             <Inputs 
@@ -40,12 +40,12 @@ export default function LoginPage({setButton2Text}) {
                 onChange={onChange}
                 required
                 />
-        <button  
+        <Button1  
         type={"submit"}
-        >Entrar</button>
-        <button onClick={()=>goToSignUpPage(history)}>Cadastre-se</button>
+        >Entrar</Button1>
+        <Button2 onClick={()=>goToSignUpPage(history)}>Cadastre-se</Button2>
         </form>
         
-    </div>
+    </Container>
     );
 }
