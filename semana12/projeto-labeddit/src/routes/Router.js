@@ -5,7 +5,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage"
 import FeedPage from "../pages/FeedPage/FeedPage"
 import LoginPage from "../pages/LoginPage/LoginPage"
 import PostPage from "../pages/PostPage/PostPage"
-import SingUpPage from "../pages/SingUpPage/SingUpPage"
+import SignUpPage from "../pages/SignUpPage/SignUpPage"
 
 export default function Router(){
     return(
@@ -20,7 +20,7 @@ export default function Router(){
                 </Route>
 
                 <Route exact path="/cadastro">
-                    <SingUpPage/>
+                    <SignUpPage/>
                 </Route>
 
                 <Route exact path="/">
