@@ -2,7 +2,7 @@ export const goToLoginPage = (history) => {
     history.push("/login")
 }
 export const goToSingUpPage = (history) => {
-    history.push("/cadastre-se")
+    history.push("/cadastro")
 }
 export const goToFeedPage = (history) => {
     history.push("/")
